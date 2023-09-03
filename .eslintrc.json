@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "rules": {
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "linebreak-style": ["off", "windows"],
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "minProperties": 6, "multiline": true, "consistent": true },
+      "ObjectPattern": { "minProperties": 6, "multiline": true, "consistent": true },
+      "ImportDeclaration": "never",
+      "ExportDeclaration": { "minProperties": 6, "multiline": true, "consistent": true }
+    }],
+    "react/prop-types": "warn"
+  }
 }
